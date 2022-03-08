@@ -24,5 +24,10 @@ COPY .  ${VIRTUAL_ENV}/scraper
 # install dependencies:
 RUN pip install -r requirements.txt
 
+VOLUME proxies
+VOLUME proxies_geolocation
+VOLUME proxies_anonymous
+VOLUME proxies_geolocation_anonymous
+
 # run the application:
 CMD ["python", "main.py"]
