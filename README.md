@@ -1,9 +1,9 @@
 # docker
 
-'''
+```
 mkdir ~/proxys
 docker run --rm -t -v ~/proxys:/opt/scraper_app/scraper/proxys rattydave/proxy-scraper-checker
-'''
+```
 
 
 # proxy-scraper-checker
