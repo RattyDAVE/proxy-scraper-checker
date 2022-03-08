@@ -1,5 +1,5 @@
 #FROM python:3.6.5-slim
-FROM python:3.11-rc-bullseye
+FROM python:3.10-bullseye
 
 # setup virtual env vars
 ENV VIRTUAL_ENV=/opt/scraper_app
