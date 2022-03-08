@@ -24,4 +24,4 @@ COPY .  ${VIRTUAL_ENV}/scraper
 RUN pip install -r requirements.txt
 
 # run the application:
-CMD ["python", "app.py"]
+CMD ["python", "main.py"]
