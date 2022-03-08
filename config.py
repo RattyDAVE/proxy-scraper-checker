@@ -3,7 +3,7 @@
 # How many seconds to wait for the proxy to make a connection.
 # The higher this number, the longer the check will take
 # and the more proxies you will receive.
-TIMEOUT = 5
+TIMEOUT = 7
 
 # Maximum concurrent connections.
 # Don't set higher than 900, please.
@@ -14,7 +14,7 @@ SORT_BY_SPEED = True
 
 # Path to the folder where the proxy folders will be saved.
 # Leave the quotes empty to save the proxies to the current directory.
-SAVE_PATH = ""
+SAVE_PATH = "proxys"
 
 # Enable which proxy folders to create.
 # Set to False to disable.
