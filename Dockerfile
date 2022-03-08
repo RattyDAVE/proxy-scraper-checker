@@ -17,11 +17,8 @@ RUN apt-get update && \
 WORKDIR ${VIRTUAL_ENV}/scraper
 
 # Add files from assets folder.
-COPY ./assets  ${VIRTUAL_ENV}/crypto-whale-watching-app/assets
-# Add files to the docker container.
-COPY ./app.py ${VIRTUAL_ENV}/crypto-whale-watching-app
-COPY ./gdax_book.py ${VIRTUAL_ENV}/crypto-whale-watching-app
-COPY ./requirements.txt ${VIRTUAL_ENV}/crypto-whale-watching-app
+COPY .  ${VIRTUAL_ENV}/scraper
+
 
 # install dependencies:
 RUN pip install -r requirements.txt
