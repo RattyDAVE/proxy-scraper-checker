@@ -24,7 +24,7 @@ COPY .  ${VIRTUAL_ENV}/scraper
 # install dependencies:
 RUN pip install -r requirements.txt
 
-VOLUME proxys
+VOLUME ${VIRTUAL_ENV}/scraper/proxys
 
 # run the application:
 CMD ["python", "main.py"]
