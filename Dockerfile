@@ -23,7 +23,11 @@ WORKDIR ${VIRTUAL_ENV}
 #COPY .  ${VIRTUAL_ENV}/scraper
 
 # install dependencies:
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
+
+RUN python3 -m pip install -U --no-cache-dir --disable-pip-version-check pip setuptools wheel
+RUN python3 -m pip install -U --no-cache-dir --disable-pip-version-check -r requirements.txt
+python3 -m proxy_scraper_checker
 
 VOLUME ${VIRTUAL_ENV}/scraper/proxys
 
@@ -31,4 +35,6 @@ VOLUME ${VIRTUAL_ENV}/scraper/proxys
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # run the application:
-CMD ["python", "main.py"]
+#CMD ["python", "main.py"]
+
+CMD ["python3", "-m", "proxy_scraper_checker"]
