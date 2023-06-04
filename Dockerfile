@@ -14,7 +14,7 @@ RUN cd /opt/ && \
 ENV VIRTUAL_ENV=/opt/scraper_app
 
 # create python virtual env
-RUN python3 -m venv $VIRTUAL_ENV
+#RUN python3 -m venv $VIRTUAL_ENV
 
 # set working dir
 WORKDIR ${VIRTUAL_ENV}
@@ -27,12 +27,11 @@ WORKDIR ${VIRTUAL_ENV}
 
 RUN python3 -m pip install -U --no-cache-dir --disable-pip-version-check pip setuptools wheel
 RUN python3 -m pip install -U --no-cache-dir --disable-pip-version-check -r requirements.txt
-python3 -m proxy_scraper_checker
 
-VOLUME ${VIRTUAL_ENV}/scraper/proxys
+#VOLUME ${VIRTUAL_ENV}/scraper/proxys
 
 # set path
-ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+#ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # run the application:
 #CMD ["python", "main.py"]
