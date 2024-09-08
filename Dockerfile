@@ -1,5 +1,6 @@
 #FROM python:3.6.5-slim
-FROM python:3.10-bullseye
+#FROM python:3.10-bullseye
+FROM python
 
 # update/upgrade
 RUN apt-get update && \
